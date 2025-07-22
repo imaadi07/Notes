@@ -1,0 +1,65 @@
+.main-about-container {
+  height: calc(100vh - 10vh);
+  width: 100vw;
+  color: white;
+}
+
+.about-box {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.image-box {
+  height: 100%;
+  width: 50%;
+  padding: 2rem;
+  /* position: absolute; */
+}
+
+.image {
+  height: 100%;
+  /* width: 100%; */
+  animation: appear 0.8s ease-in-out forwards;
+}
+
+.content-box {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.content-box h1 {
+  font-size: 3rem;
+  animation: appear 0.8s ease-in-out forwards;
+}
+
+.name {
+  font-size: 3rem;
+  animation: appear 0.8s ease-in-out forwards;
+}
+
+.name span {
+  color: red;
+}
+
+.about {
+  font-size: 1.3rem;
+  animation: appear 0.8s ease-in-out forwards;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

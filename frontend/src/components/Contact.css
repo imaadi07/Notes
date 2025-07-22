@@ -1,0 +1,119 @@
+.main-contact-container {
+  height: calc(100vh - 10vh);
+  width: 100vw;
+  color: white;
+}
+
+.contact-box {
+  height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+.left-contact-box {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  padding-left: 3rem;
+}
+
+.inner-left-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.contact-heading {
+  font-size: 3.5rem;
+  animation: appear 0.8s ease-in-out forwards;
+}
+
+.social-icons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  animation: appear 0.8s ease-in-out forwards;
+}
+
+.icon {
+  font-size: 2rem;
+  color: white;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.icon:hover {
+  color: #0a66c2; /* LinkedIn blue as default */
+  transform: scale(1.2);
+}
+
+.right-contact-box {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.contact-form {
+  border: 2px solid white;
+  padding: 1rem;
+  height: 55vh;
+  width: 75%;
+  border-radius: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  animation: appear 0.8s ease-in-out forwards;
+}
+
+.input {
+  height: 5vh;
+  width: 25vw;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  color: black;
+  padding: 1rem;
+}
+
+.input:focus {
+  border: 2px solid orange;
+}
+
+.text-area {
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  color: black;
+  padding: 1rem;
+}
+
+.text-area:focus {
+  border: 2px solid orange;
+}
+
+.send-btn {
+  height: 5vh;
+  width: 25vw;
+  border: none;
+  border-radius: 5px;
+  background-color: orangered;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

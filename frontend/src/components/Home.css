@@ -1,0 +1,68 @@
+.main-home-box {
+  height: calc(100vh - 10vh);
+  width: 100vw;
+  color: whitesmoke;
+}
+
+.home-box {
+  height: 100%;
+  width: 100;
+  display: flex;
+  gap: 3rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 3rem;
+}
+
+.heading {
+  font-size: 3.5rem;
+  animation: appear 0.8s ease-in-out forwards;
+}
+
+.heading span {
+  animation: blink 0.6s ease-in-out infinite alternate-reverse;
+  opacity: 0;
+  color: red;
+}
+
+@keyframes blink {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.btn-box {
+  display: flex;
+  align-items: center; /* ✅ vertical alignment */
+  gap: 0.5rem; /* spacing between text and arrow */
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  cursor: pointer;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+  animation: appear 0.8s ease-in-out forwards;
+}
+
+.btn-box:hover {
+  gap: 2rem;
+}
+
+.btn-box p {
+  font-size: 1.5rem;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

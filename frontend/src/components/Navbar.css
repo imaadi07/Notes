@@ -1,0 +1,51 @@
+.main-box {
+  width: 100vw;
+  height: 10vh;
+  /* border-bottom: 1px solid black; */
+  /* position: fixed; */
+}
+
+.nav-bar {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.logo-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 1.2rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: whitesmoke;
+}
+
+.comp-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 1.5rem;
+}
+
+.links {
+  list-style-type: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-link-active {
+  text-decoration: none;
+  color: red;
+}
+
+.nav-link {
+  color: whitesmoke;
+  text-decoration: none;
+}
