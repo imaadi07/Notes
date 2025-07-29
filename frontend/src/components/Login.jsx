@@ -13,12 +13,12 @@ function Login() {
   } = useForm();
 
   const handleGoogleRegister = () => {
-    window.location.href = "http://localhost:3000/auth/google";
+    window.location.href = "https://notes-gm3m.onrender.com/api/notes/auth/google";
   };
 
   const handleLogin = async (data) => {
     try {
-      const response = await axios.post("http://localhost:3000/login", data, {
+      const response = await axios.post("https://notes-gm3m.onrender.com/api/notes/login", data, {
         withCredentials: true,
       });
       if (response.status === 200) {

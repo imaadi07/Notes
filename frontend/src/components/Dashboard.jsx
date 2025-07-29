@@ -21,9 +21,12 @@ function Dashboard() {
 
   const fetchUser = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/me", {
-        withCredentials: true,
-      });
+      const response = await axios.get(
+        "https://notes-gm3m.onrender.com/api/notes/me",
+        {
+          withCredentials: true,
+        }
+      );
       setUser(response.data);
     } catch (error) {
       console.error("User not authenticated", error);
@@ -33,9 +36,12 @@ function Dashboard() {
 
   const fetchData = async () => {
     try {
-      const response = await axios.get("http://localhost:3000/getnotes", {
-        withCredentials: true,
-      });
+      const response = await axios.get(
+        "https://notes-gm3m.onrender.com/api/notes/getnotes",
+        {
+          withCredentials: true,
+        }
+      );
       const data = response.data;
       setNotes(data);
     } catch (error) {
@@ -46,7 +52,7 @@ function Dashboard() {
   const onSubmit = async (data) => {
     try {
       const response = await axios.post(
-        "http://localhost:3000/newnotes",
+        "https://notes-gm3m.onrender.com/api/notes/newnotes",
         data,
         { withCredentials: true }
       );
@@ -63,9 +69,12 @@ function Dashboard() {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:3000/deletenote/${id}`, {
-        withCredentials: true,
-      });
+      await axios.delete(
+        `https://notes-gm3m.onrender.com/api/notes/deletenote/${id}`,
+        {
+          withCredentials: true,
+        }
+      );
       fetchData(); // refresh notes
     } catch (error) {
       console.error("Delete failed", error);
@@ -75,7 +84,7 @@ function Dashboard() {
   const handleUpdate = async () => {
     try {
       const response = await axios.put(
-        `http://localhost:3000/updatenote/${selectedNote._id}`,
+        `https://notes-gm3m.onrender.com/api/notes/updatenote/${selectedNote._id}`,
         {
           name: editTitle,
           content: editContent,
@@ -99,7 +108,7 @@ function Dashboard() {
 
   const handleLogout = async () => {
     try {
-      await axios.get("http://localhost:3000/logout", {
+      await axios.get("https://notes-gm3m.onrender.com/api/notes/logout", {
         withCredentials: true,
       });
       localStorage.removeItem("user");
