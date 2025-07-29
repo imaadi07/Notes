@@ -22,7 +22,7 @@ function Dashboard() {
   const fetchUser = async () => {
     try {
       const response = await axios.get(
-        "https://notes-gm3m.onrender.com/api/notes/me",
+        `${import.meta.env.VITE_API_URL}/api/notes/me`,
         {
           withCredentials: true,
         }
@@ -37,7 +37,7 @@ function Dashboard() {
   const fetchData = async () => {
     try {
       const response = await axios.get(
-        "https://notes-gm3m.onrender.com/api/notes/getnotes",
+        `${import.meta.env.VITE_API_URL}/api/notes/getnotes`,
         {
           withCredentials: true,
         }
@@ -52,7 +52,7 @@ function Dashboard() {
   const onSubmit = async (data) => {
     try {
       const response = await axios.post(
-        "https://notes-gm3m.onrender.com/api/notes/newnotes",
+        `${import.meta.env.VITE_API_URL}/api/notes/newnotes`,
         data,
         { withCredentials: true }
       );
@@ -70,7 +70,7 @@ function Dashboard() {
   const handleDelete = async (id) => {
     try {
       await axios.delete(
-        `https://notes-gm3m.onrender.com/api/notes/deletenote/${id}`,
+        `${import.meta.env.VITE_API_URL}/api/notes/deletenote/${id}`,
         {
           withCredentials: true,
         }
@@ -84,7 +84,7 @@ function Dashboard() {
   const handleUpdate = async () => {
     try {
       const response = await axios.put(
-        `https://notes-gm3m.onrender.com/api/notes/updatenote/${selectedNote._id}`,
+        `${import.meta.env.VITE_API_URL}/api/notes/updatenote/${selectedNote._id}`,
         {
           name: editTitle,
           content: editContent,
@@ -108,7 +108,7 @@ function Dashboard() {
 
   const handleLogout = async () => {
     try {
-      await axios.get("https://notes-gm3m.onrender.com/api/notes/logout", {
+      await axios.get(`${import.meta.env.VITE_API_URL}/api/notes/logout`, {
         withCredentials: true,
       });
       localStorage.removeItem("user");

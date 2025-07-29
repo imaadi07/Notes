@@ -13,14 +13,13 @@ function Register() {
   } = useForm();
 
   const handleGoogleRegister = () => {
-    window.location.href =
-      "https://notes-gm3m.onrender.com/api/notes/auth/google";
+    window.location.href = `${import.meta.env.VITE_API_URL}/auth/google`;
   };
 
   const handleRegister = async (data) => {
     try {
       const response = await axios.post(
-        "https://notes-gm3m.onrender.com/api/notes/register",
+        `${import.meta.env.VITE_API_URL}/register`,
         data,
         { withCredentials: true }
       );
